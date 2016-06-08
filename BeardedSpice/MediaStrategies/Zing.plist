@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!--
+//
+//  Zing.plist
+//  BeardedSpice
+//
+//  Created by Alvin Nguyen on 06/08/16.
+//  Copyright (c) 2016 Alvin Nguyen. All rights reserved.
+//
+-->
+<dict>
+    <key>version</key>
+    <integer>1</integer>
+    <key>displayName</key>
+    <string>Zing</string>
+
+    <key>accepts</key>
+    <dict>
+        <key>predicate</key>
+        <string>SELF LIKE[c] '*mp3.zing.vn*'</string>
+        <key>tabValue</key>
+        <string>url</string>
+    </dict>
+
+    <key>toggle</key>
+    <string>(function(){ document.querySelector('.jp-play').click(); })()</string>
+
+    <key>previous</key>
+    <string>(function(){ document.querySelector('.fn-prev').click(); })()</string>
+
+    <key>next</key>
+    <string>(function(){ document.querySelector('.fn-next').click(); })()</string>
+
+    <key>pause</key>
+    <string>(function(){ document.querySelector('.jp-pause').click(); })()</string>
+
+    <key>trackInfo</key>
+    <string>(function(){
+        return {
+            'image': document.querySelector('.pthumb').getAttribute('src'),
+            'track':  document.querySelector('.fn-song.fn-current .fn-name').innerText,
+            'artist': document.querySelector('.fn-song.fn-current h4 a').innerText
+        }})()</string>
+</dict>
+</plist>
