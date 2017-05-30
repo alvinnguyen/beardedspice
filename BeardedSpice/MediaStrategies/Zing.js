@@ -2,20 +2,20 @@
 //  Zing.plist
 //  BeardedSpice
 //
-//  Created by Alvin Nguyen on 06/23/16.
+//  Created by Alvin Nguyen on 05/30/17.
 //
 BSStrategy = {
-  version: 1,
+  version: 2,
   displayName: "Zing MP3",
   accepts: {
     method: "predicateOnTab",
     format: "%K LIKE[c] '*mp3.zing.vn/*'",
     args: ["URL"]
   },
-toggle: function(){  if (document.querySelector('.jp-play').style.display === 'none') { document.querySelector('.jp-pause').click(); } else { document.querySelector('.jp-play').click();} },
-  previous: function(){ document.querySelector('.fn-prev').click(); },
-  next: function(){ document.querySelector('.fn-next').click(); },
-  pause: function(){ document.querySelector('.jp-pause').click(); },
+  toggle: function(){ document.querySelector('.paused').click(); },
+  previous: function(){ document.querySelector('.zp-button-prev').click(); },
+  next: function(){ document.querySelector('.zp-button-next').click(); },
+  pause: function(){ document.querySelector('.paused').click(); },
   trackInfo: function () {
     return {
         'image': document.querySelector('.pthumb').getAttribute('src'),
